@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #edf2f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#todo-container {
+    background-color: #2b2d42;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+}
+
+input[type="text"] {
+    text-align: center;
+    width: calc(100% - 75px);
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px;
+    background-color: #ef8354;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #d6453d;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+li {
+    background: #fff;
+    padding: 15px;
+    font-size: 16px;
+    color: black;
+}
+</style>
+
+
+<body>
+
+<div id="todo-container">
+    <input type="text" id="new-task" placeholder="add new">
+    <button id="add-button">Add</button>
+    <ul id="todo-list">
+        <li>Read a book</li>
+        <li>Lunch with Caro</li>
+        <li>Feed the dog</li>
+    </ul>
+</div>
+
+
+
+</body>
+<script>
+    document.getElementById('add-button').addEventListener('click', function() 
+    {
+    // Get the input value
+    var inputValue = document.getElementById('new-task').value;
+
+    // Check if the input is not empty
+    if (inputValue.trim() !== '') {
+        // Create a new list item
+        var newListItem = document.createElement('li');
+        newListItem.textContent = inputValue;
+
+        // Append the new list item to the list
+        document.getElementById('todo-list').appendChild(newListItem);
+
+        // Clear the input field
+        document.getElementById('new-task').value = '';
+        }
+    });
+</script>
+</html>
