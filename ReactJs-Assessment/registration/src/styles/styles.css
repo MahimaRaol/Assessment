@@ -1,0 +1,93 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Container styling */
+  .container {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 400px;
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #555;
+  }
+  
+  /* Label styling */
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  /* Input field styling */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="tel"],
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  input:focus,
+  select:focus {
+    outline: none;
+    border: 1px solid #007bff;
+    box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  /* Error message styling */
+  .text-danger {
+    color: red;
+    font-size: 12px;
+  }
+  
+  /* Button styling */
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #218838;
+  }
+  
+  /* Media Query for Responsiveness */
+  @media (max-width: 500px) {
+    .container {
+      width: 90%;
+    }
+  }
+  
